@@ -1,0 +1,6 @@
+name: CrownLib
+version: '1.0.0-SNAPSHOT'
+main: kr.crownrpg.lib.CrownLib
+api-version: '1.21'
+author: CrownRPG
+description: Core library for CrownRPG Season 2
