@@ -1,7 +1,5 @@
 package kr.crownrpg.lib.messaging;
 
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
@@ -25,7 +23,7 @@ public final class CrownMessage {
         this.sourceNodeId = sourceNodeId;
         this.createdAt = createdAt;
         this.type = type;
-        this.payload = Collections.unmodifiableMap(new HashMap<>(payload)); // SAFETY FIX
+        this.payload = payload;
     }
 
     /* ---------- factory ---------- */

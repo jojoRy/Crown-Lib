@@ -7,23 +7,7 @@ public final class CrownLogger {
     private CrownLogger() {}
 
     public static void init(Logger baseLogger) { logger = baseLogger; }
-
-    public static void info(String msg) {
-        getLoggerOrThrow().info(msg); // SAFETY FIX
-    }
-
-    public static void warn(String msg) {
-        getLoggerOrThrow().warning(msg); // SAFETY FIX
-    }
-
-    public static void error(String msg) {
-        getLoggerOrThrow().severe(msg); // SAFETY FIX
-    }
-
-    private static Logger getLoggerOrThrow() {
-        if (logger == null) {
-            throw new IllegalStateException("CrownLogger is not initialized");
-        }
-        return logger;
-    }
+    public static void info(String msg) { logger.info(msg); }
+    public static void warn(String msg) { logger.warning(msg); }
+    public static void error(String msg) { logger.severe(msg); }
 }
