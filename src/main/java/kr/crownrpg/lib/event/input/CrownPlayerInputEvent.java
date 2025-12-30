@@ -16,8 +16,6 @@ import org.bukkit.event.HandlerList;
  */
 public abstract class CrownPlayerInputEvent extends CrownEvent {
 
-    private static final HandlerList HANDLERS = new HandlerList();
-
     protected final Player player;
 
     protected CrownPlayerInputEvent(Player player) {
@@ -26,14 +24,5 @@ public abstract class CrownPlayerInputEvent extends CrownEvent {
 
     public Player getPlayer() {
         return player;
-    }
-
-    @Override
-    public HandlerList getHandlers() {
-        return HANDLERS;
-    }
-
-    public static HandlerList getHandlerList() {
-        return HANDLERS;
     }
 }
